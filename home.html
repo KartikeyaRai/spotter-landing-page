@@ -7,95 +7,110 @@
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom font import for a cleaner, modern look */
+        /* Custom font import */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            /* Navy Blue Background - Inspired by Tommy Hilfiger */
-            background-color: #1e3a8a; /* Blue-900 */
+            /* Lighter Base Background */
+            background-color: #f9fafb; /* Gray-50 */
+            color: #1f2937; /* Gray-800 */
         }
-        /* Defining the primary accent color: Red */
+        /* Defining the primary Navy accent */
+        .text-spotter-navy { color: #1e3a8a; } /* Blue-900 */
+        .bg-spotter-navy { background-color: #1e3a8a; } 
+        /* Defining the primary Red accent */
         .text-spotter-red { color: #dc2626; } /* Red-600 */
-        .bg-spotter-red { background-color: #dc2626; } /* Red-600 */
+        .bg-spotter-red { background-color: #dc2626; } 
         .hover-bg-spotter-red:hover { background-color: #b91c1c; } /* Red-700 */
-        
-        /* Defining the main background color: White/Light Gray for sections */
-        .bg-spotter-main { background-color: #f3f4f6; } /* Gray-100 */
 
         .hero-bg {
-            /* Subtle radial gradient for depth over the navy blue */
-            background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            /* Clean white background for the hero section */
+            background-color: white;
         }
     </style>
 </head>
-<body class="text-gray-900 antialiased">
+<body class="antialiased">
 
-    <!-- Header & Navigation (Navy/White) -->
-    <header class="p-4 border-b border-blue-800 sticky top-0 z-10 bg-blue-900/95 backdrop-blur-sm">
+    <!-- Header & Navigation (Light Navy on White) -->
+    <header class="p-4 border-b border-gray-100 sticky top-0 z-10 bg-white/95 backdrop-blur-sm shadow-md">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <h1 class="text-3xl font-extrabold tracking-tight text-white">
+            <h1 class="text-3xl font-extrabold tracking-tight text-spotter-navy">
                 Spotter<span class="text-spotter-red text-4xl">.</span>
             </h1>
             <nav class="hidden sm:block">
-                <a href="#features" class="text-white hover:text-spotter-red mx-3 transition duration-150 font-medium">Features</a>
-                <a href="#reviews" class="text-white hover:text-spotter-red mx-3 transition duration-150 font-medium">Reviews</a>
-                <a href="#waitlist" class="bg-spotter-red text-white py-2 px-5 rounded-lg ml-4 font-bold transition duration-300 hover-bg-spotter-red">Join Waitlist</a>
+                <a href="#features" class="text-spotter-navy hover:text-spotter-red mx-3 transition duration-150 font-medium">Features</a>
+                <a href="#reviews" class="text-spotter-navy hover:text-spotter-red mx-3 transition duration-150 font-medium">Reviews</a>
+                <a href="#waitlist" class="bg-spotter-red text-white py-2 px-5 rounded-lg ml-4 font-bold transition duration-300 hover-bg-spotter-red shadow-md">Join Waitlist</a>
             </nav>
         </div>
     </header>
 
-    <!-- 1. Hero Section (Navy Background, White Text, Red Accent) -->
-    <section class="hero-bg pt-20 pb-24 px-4 text-center text-white min-h-[70vh] flex items-center">
-        <div class="max-w-4xl mx-auto">
-            <span class="inline-block px-4 py-1 text-sm font-bold rounded-full bg-red-600/20 text-spotter-red mb-4 border border-red-600">The Ultimate AI Fitness & Nutrition Coach</span>
-            <h2 class="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
-                Truly Personalized Fitness. <br class="hidden sm:inline"> Built for <span class="text-spotter-red">Your Body.</span>
-            </h2>
-            <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-                **Spotter** dynamically designs and updates your weekly workout and diet plans based on your specific **goals, injuries, equipment, dietary constraints, and even ethnicity.** Stop guessing, start achieving.
-            </p>
-            <a href="#waitlist" class="bg-spotter-red hover-bg-spotter-red text-white font-bold py-4 px-10 rounded-xl text-xl shadow-2xl shadow-red-700/50 transition duration-300 transform hover:scale-105">
-                Join the Exclusive Waitlist
-            </a>
-            <p class="text-sm text-gray-400 mt-4">Limited spots available for early access.</p>
+    <!-- 1. Hero Section (White/Light Gray Background for better aesthetics) -->
+    <section class="hero-bg pt-20 pb-24 px-4 text-center min-h-[80vh] flex items-center">
+        <div class="max-w-6xl mx-auto">
+            <span class="inline-block px-4 py-1 text-sm font-bold rounded-full bg-red-100 text-spotter-red mb-4 border border-red-300">The Ultimate AI Fitness & Nutrition Coach</span>
+            
+            <div class="grid md:grid-cols-2 gap-10 items-center text-left">
+                <!-- Left Column: Text -->
+                <div>
+                    <h2 class="text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight text-spotter-navy">
+                        Truly Personalized Fitness. <br> Built for <span class="text-spotter-red">Your Body.</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-8">
+                        **Spotter** dynamically designs and updates your weekly workout and diet plans based on your specific **goals, injuries, equipment, dietary constraints, and even ethnicity.** Stop guessing, start achieving.
+                    </p>
+                    <a href="#waitlist" class="bg-spotter-red hover-bg-spotter-red text-white font-bold py-4 px-8 rounded-xl text-lg shadow-xl shadow-red-700/30 transition duration-300 transform hover:scale-105 inline-block">
+                        Secure Your Spot on the Waitlist
+                    </a>
+                    <p class="text-sm text-gray-500 mt-4">Limited spots available for early access.</p>
+                </div>
+
+                <!-- Right Column: Image Placeholder (for better visual aesthetics) -->
+                <div class="hidden md:flex justify-center items-center h-full">
+                    <!-- Placeholder for App Screenshot or Illustration -->
+                    <div class="w-full max-w-md h-96 bg-gray-100 border-8 border-spotter-navy rounded-3xl shadow-[0_20px_50px_rgba(30,58,138,0.5)] overflow-hidden">
+                        <img src="https://placehold.co/800x1200/1e3a8a/ffffff?text=Spotter+App+Preview" onerror="this.src='https://placehold.co/800x1200/1e3a8a/ffffff?text=Spotter+App+Preview'" alt="Spotter App User Interface Preview" class="w-full h-full object-cover opacity-80" />
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- 2. Features Section (White/Light Gray Background) -->
-    <section id="features" class="py-20 px-4 bg-spotter-main">
+    <!-- 2. Features Section (Light Gray Background) -->
+    <section id="features" class="py-20 px-4 bg-gray-50 border-t border-b border-gray-200">
         <div class="max-w-7xl mx-auto">
-            <h3 class="text-4xl font-bold text-center mb-16 text-blue-900">Intelligence That Understands You</h3>
+            <h3 class="text-4xl font-bold text-center mb-16 text-spotter-navy">Intelligence That Understands You</h3>
             
             <div class="grid md:grid-cols-3 gap-10">
                 
                 <!-- Feature 1: Hyper-Customization -->
                 <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-spotter-red transition duration-300 hover:shadow-2xl">
                     <svg class="w-10 h-10 text-spotter-red mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37a1.724 1.724 0 002.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                    <h4 class="text-xl font-bold mb-3 text-blue-900">Hyper-Personalized Plans</h4>
+                    <h4 class="text-xl font-bold mb-3 text-spotter-navy">Hyper-Personalized Plans</h4>
                     <p class="text-gray-600">We go beyond basics. Spotter factors in injuries, specific equipment availability, and even your ethnicity and metabolism to craft a plan that maximizes results and minimizes risk for *your* unique body.</p>
                 </div>
                 
                 <!-- Feature 2: Dynamic Feedback Loop -->
-                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-blue-900 transition duration-300 hover:shadow-2xl">
-                    <svg class="w-10 h-10 text-blue-900 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2.14M20 15h-4.581"/></svg>
-                    <h4 class="text-xl font-bold mb-3 text-blue-900">Adaptive Coaching & Tracking</h4>
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-spotter-navy transition duration-300 hover:shadow-2xl">
+                    <svg class="w-10 h-10 text-spotter-navy mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2.14M20 15h-4.581"/></svg>
+                    <h4 class="text-xl font-bold mb-3 text-spotter-navy">Adaptive Coaching & Tracking</h4>
                     <p class="text-gray-600">Our AI doesn't just create a plan; it learns. Based on your daily input, workout performance, and bi-weekly feedback, your plan is automatically updated and optimized to prevent plateaus and drive continuous progress towards your goals.</p>
                 </div>
 
                 <!-- Feature 3: Integrated Nutrition & Macros -->
                 <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-spotter-red transition duration-300 hover:shadow-2xl">
                     <svg class="w-10 h-10 text-spotter-red mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                    <h4 class="text-xl font-bold mb-3 text-blue-900">Holistic Diet Management</h4>
+                    <h4 class="text-xl font-bold mb-3 text-spotter-navy">Holistic Diet Management</h4>
                     <p class="text-gray-600">Get weekly meal recommendations and macro splits fully integrated with your fitness goals and dietary constraints (Vegan, Keto, Allergies, etc.). Fuel your body the right way, every time.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 3. Reviews Section (Navy Background, White/Red Text) -->
-    <section id="reviews" class="py-20 px-4 bg-blue-900">
+    <!-- 3. Reviews Section (Navy Background for Strong Contrast) -->
+    <section id="reviews" class="py-20 px-4 bg-spotter-navy text-white">
         <div class="max-w-7xl mx-auto">
-            <h3 class="text-4xl font-bold text-center mb-16 text-white">What Our Trial Users Say</h3>
+            <h3 class="text-4xl font-bold text-center mb-16">What Our Trial Users Say</h3>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
@@ -127,16 +142,18 @@
         </div>
     </section>
     
-    <!-- 4. Join Waitlist/CTA Section (White/Light Gray Background) -->
-    <section id="waitlist" class="py-20 px-4 bg-spotter-main">
-        <div class="max-w-3xl mx-auto text-center p-8 bg-white rounded-xl shadow-2xl border border-gray-200">
-            <h3 class="text-3xl font-extrabold mb-4 text-blue-900">Ready to Meet Your Spotter?</h3>
+    <!-- 4. Join Waitlist/CTA Section (White Background) -->
+    <section id="waitlist" class="py-20 px-4 bg-white">
+        <div class="max-w-3xl mx-auto text-center p-8 bg-gray-50 rounded-xl shadow-2xl border border-gray-200">
+            <h3 class="text-3xl font-extrabold mb-4 text-spotter-navy">Ready to Meet Your Spotter?</h3>
             <p class="text-lg text-gray-600 mb-8">Join the exclusive waitlist to secure your early access spot and transform your fitness journey with AI intelligence.</p>
 
-            <form id="waitlist-form" class="space-y-4 max-w-lg mx-auto">
-                <input type="text" id="name" placeholder="Your Full Name" required class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-spotter-red focus:border-spotter-red transition duration-150">
-                <input type="email" id="email" placeholder="Your Best Email Address" required class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-spotter-red focus:border-spotter-red transition duration-150">
-                <button type="submit" class="w-full bg-blue-900 hover:bg-blue-700 text-white font-bold py-4 rounded-xl text-lg transition duration-300 transform hover:scale-[1.01]">
+            <!-- Netlify Form: Data will be stored here -->
+            <form name="waitlist-form" method="POST" data-netlify="true" id="waitlist-form" class="space-y-4 max-w-lg mx-auto">
+                <input type="hidden" name="form-name" value="waitlist-form" />
+                <input type="text" name="name" id="name" placeholder="Your Full Name" required class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-spotter-red focus:border-spotter-red transition duration-150">
+                <input type="email" name="email" id="email" placeholder="Your Best Email Address" required class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-spotter-red focus:border-spotter-red transition duration-150">
+                <button type="submit" class="w-full bg-spotter-navy hover:bg-blue-700 text-white font-bold py-4 rounded-xl text-lg transition duration-300 transform hover:scale-[1.01] shadow-lg">
                     Secure My Spot Now
                 </button>
             </form>
@@ -145,36 +162,36 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 px-4 bg-blue-900 text-center text-gray-400">
+    <footer class="py-8 px-4 bg-spotter-navy text-center text-gray-400">
         <div class="max-w-7xl mx-auto">
             <p class="mb-2">&copy; 2025 Spotter AI Coach. All rights reserved.</p>
             <p>Built with Intelligence, Designed for You.</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Waitlist Form Simulation -->
+    <!-- JavaScript for Netlify AJAX Form Submission -->
     <script>
         document.getElementById('waitlist-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
+            const form = e.target;
+            const formData = new FormData(form);
             const messageElement = document.getElementById('message');
 
-            // Simple validation simulation
-            if (name && email) {
-                // Simulate successful registration
-                messageElement.textContent = `Thank you, ${name}! Your email (${email}) has been added to the waitlist. We will notify you soon!`;
-                messageElement.className = 'mt-4 text-sm font-semibold text-green-500';
-                messageElement.style.display = 'block';
-                
-                // Clear form inputs
-                document.getElementById('name').value = '';
-                document.getElementById('email').value = '';
-            } else {
-                messageElement.textContent = 'Please fill out both your name and email address to join the waitlist.';
-                messageElement.className = 'mt-4 text-sm font-semibold text-spotter-red';
-                messageElement.style.display = 'block';
-            }
+            // Netlify's recommended AJAX submission handler
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(() => {
+                messageElement.textContent = "Success! You are now on the waitlist. Check your email for a confirmation (may take a minute or two).";
+                messageElement.className = 'mt-4 text-sm font-semibold text-green-600 bg-green-100 p-3 rounded-lg block';
+                form.reset();
+            })
+            .catch((error) => {
+                messageElement.textContent = `Error submitting the form. Please try again later.`;
+                messageElement.className = 'mt-4 text-sm font-semibold text-red-600 bg-red-100 p-3 rounded-lg block';
+            });
         });
     </script>
 </body>
